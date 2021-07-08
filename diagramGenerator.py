@@ -3,20 +3,12 @@ import sys
 def main(s, p, of):
    if any([type(x) != int for x in [s,p]]):
        sys.exit('s or p is not an int')
-#      raise Exception('s or p is not an int')
    if any([x < 2 for x in [s,p]]):
        sys.exit('s or p is less than 2')
-#      raise Exception('s or p is less than 2')
    if p > 96:
        sys.exit('Too many in parallel')
-#      raise Exception('Too many in parallel')
    if s > 110:
        sys.exit('Too many in series')
-#      raise Exception('Too many in series')
-   if s*p > 46**2:
-       sys.exit('Not enough memory to generate pdf')
-#      raise Exception('Not enough memory to generate pdf')
-
    width = 11-39*(p-2)
    outfile = open(of, 'w')
    outfile.write('\\documentclass[12pt]{article}\n%\\usepackage{a4wide}\n\\usepackage{geometry}\n\\newgeometry{vmargin={10mm,')
