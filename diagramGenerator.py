@@ -51,4 +51,4 @@ def main(s, p, of):
 
    outfile.write('\\end{circuitikz}\n\\end{center}\n}\n\\end{document}\n')
 
-#main(50,50,'test.tex')
+# main(50,50,'diagram.tex') # for use as a stand alone program
